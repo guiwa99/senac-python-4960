@@ -19,3 +19,23 @@ print(f"alunos[0] {alunos[0]}")
 print(f"alunos[1] {alunos[1]}")
 print(f"alunos[1] {alunos[-1]}")
 
+alunos[1] = "Anna"
+
+print(alunos)
+
+alunos.insert(1, "Gabriela")
+
+print(alunos)
+
+alunos.remove("Guilherme")
+
+print(alunos)
+
+# sem parametro, remove ultimo / com parametro, remove por indice
+alunos.pop(1)
+
+print(alunos)
+
+tamanho_lista = len(alunos)
+
+print(f"tamanho lista {tamanho_lista}")
