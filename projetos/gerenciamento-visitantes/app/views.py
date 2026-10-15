@@ -34,3 +34,12 @@ def create_visitor(request):
         return redirect('visitors')
 
     return render(request, 'create-visitor.html')
+
+def update_visitor(request, id):
+    visitor = Visitor.objects.get(pk=id)
+
+    response = {
+        'visitor': visitor    
+    }
+
+    return render(request, 'update-visitor.html', response)
