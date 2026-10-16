@@ -25,7 +25,7 @@
                     <th>Data de nascimento</th>
                     <th>Data do ingresso</th>
                     <th>Tipo do ingresso</th>
-                    <th>Número do ingresso</th>
+                    <th>Ações</th>
                 </tr>
 
                 {% for visitor in visitors %}
@@ -36,7 +36,9 @@
                     <td>{{ visitor.birth_date|date:"d/m/Y" }}</td>
                     <td>{{ visitor.ticket_date|date:"d/m/Y" }}</td>
                     <td>{{ visitor.get_ticket_type_display }}</td>
-                    <td>{{ visitor.ticket_number }}</td>
+                    <td>
+                        <a href="./update/{{ visitor.id }}/" class="btn btn-outline-primary btn-custom">Editar</a>
+                    </td>
                 </tr>
                 {% endfor %}
             </table>
