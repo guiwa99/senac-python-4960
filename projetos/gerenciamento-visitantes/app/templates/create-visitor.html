@@ -10,6 +10,40 @@
     <title>Criar visitante</title>
 </head>
 <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="{% url 'home' %}">Parque da Oktoberfest</a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu_principal"
+                    aria-controls="menu_principal" aria-expanded="false" aria-label="Alternar navegação">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="menu_principal">
+
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'home' %}">Início</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'create_visitor' %}">Cadastrar visitante</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'visitors' %}">Visitantes</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="">Estatísticas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
     <div class="container-fluid pt-5">
         <h1>Criar novo visitante</h1>
         <p>Use o formulário abaixo para criar um novo visitante</p>
