@@ -1,12 +1,19 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block title %}
 Início
 {% endblock %}
 
 {% block content %}
-    <h1>Página inicial - Gerenciamento de visitantes</h1>
-    <p>Bem vindo ao nosso site</p>
+    <h3>Página inicial - Gerenciamento de visitantes</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At consequuntur nulla voluptate quaerat ipsam officia, voluptatibus totam minus ipsum, quasi repellendus debitis fugit dolorem, eligendi illum architecto recusandae consequatur dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus deserunt autem, alias, nihil ipsum iusto sed quasi et esse natus nulla voluptatum, magni doloremque accusamus ea asperiores repudiandae rem dolore.</p>
 
-    <a href="visitors/">Clique aqui para ver a lista de visitantes</a>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorem molestias animi molestiae aspernatur ipsum ipsa eaque, harum nostrum in ut saepe temporibus asperiores illum possimus facere sunt deserunt totam maiores.</p>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores quaerat minus veniam ipsa minima omnis ad deserunt dignissimos perferendis, nam ducimus incidunt consequuntur molestiae, fugiat aperiam aliquam quo perspiciatis officiis.</p>
+
+
+    <a class="btn btn-outline-primary btn-custom" href="visitors/">Ver visitantes</a>
+
+    <img src="{% static 'visitors/images/banner-home.png' %}" alt="Banner Oktoberfest">
 {% endblock %}
