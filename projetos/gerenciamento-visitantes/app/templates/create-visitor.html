@@ -1,50 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'base.html' %}
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+{% block title %}
+Criar visitante
+{% endblock %}
 
-    <title>Criar visitante</title>
-</head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="{% url 'home' %}">Parque da Oktoberfest</a>
+{% block content %}
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu_principal"
-                    aria-controls="menu_principal" aria-expanded="false" aria-label="Alternar navegação">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="menu_principal">
-
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'home' %}">Início</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'create_visitor' %}">Cadastrar visitante</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'visitors' %}">Visitantes</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="">Estatísticas</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <div class="container-fluid pt-5">
+    <div class="">
         <h1>Criar novo visitante</h1>
         <p>Use o formulário abaixo para criar um novo visitante</p>
 
@@ -77,5 +39,4 @@
 
         <a href="../" class="btn btn-outline-primary mt-3">Voltar</a>
     </div>
-</body>
-</html>
+{% endblock %}
