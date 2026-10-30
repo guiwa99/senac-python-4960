@@ -13,7 +13,7 @@ class Visitor(models.Model):
     birth_date = models.DateField()
     ticket_date = models.DateField()
     ticket_type = models.IntegerField(choices=TicketType.choices)
-    ticket_number = models.CharField(255)
+    ticket_number = models.CharField(max_length=255)
 
     def __str__(self):
         return f'{self.first_name} {self.last_name}'
