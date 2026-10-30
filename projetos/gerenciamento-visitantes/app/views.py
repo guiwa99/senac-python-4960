@@ -3,6 +3,7 @@ from django.shortcuts import render, redirect
 from datetime import datetime
 from uuid import uuid4
 
+from .forms.create_visitor_form import CreateVisitorForm
 from .models import Visitor, TicketType
 
 # Create your views here.
@@ -37,21 +38,22 @@ def visitors(request):
 
 def create_visitor(request):
     if request.method == 'POST':
-        visitor = Visitor()
+        visitor_form = CreateVisitorForm(request.POST)
 
-        visitor.first_name = request.POST['first_name']
-        visitor.last_name = request.POST['last_name']
-        visitor.cpf = request.POST['cpf']
-        visitor.birth_date = datetime.strptime(request.POST['birth_date'], '%Y-%m-%d')
-        visitor.ticket_date = datetime.strptime(request.POST['ticket_date'], '%Y-%m-%d')
-        visitor.ticket_type = request.POST['ticket_type']
-        visitor.ticket_number = str(uuid4())
+        if visitor_form.is_valid():
+            visitor = visitor_form.save(commit=False)
+            visitor.ticket_number = str(uuid4())
+            visitor.save()
 
-        visitor.save()
+            return redirect('visitors')
+    else:
+        visitor_form = CreateVisitorForm()
 
-        return redirect('visitors')
+    response = {
+        'form': visitor_form
+    }
 
-    return render(request, 'create-visitor.html')
+    return render(request, 'create-visitor.html', response)
 
 def update_visitor(request, id):
     visitor = Visitor.objects.get(pk=id)

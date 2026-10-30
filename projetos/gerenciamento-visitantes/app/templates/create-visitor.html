@@ -13,19 +13,27 @@ Criar visitante
         <form action="./" method="post">
             {% csrf_token %}
             <label for="first_name" class="form-label">Primeiro nome</label>
-            <input type="text" class="form-control" id="first_name" name="first_name">
-            
+            <input type="text" class="form-control" id="first_name" name="first_name" value="{{ form.first_name.value|default_if_none:'' }}">
+            <div class="form-text text-danger">
+                {% if form.first_name.errors %}
+                    {% for error in form.first_name.errors %}
+                        <span>{{ error }}</span>
+                    {% endfor %}
+                {% endif %}
+            </div>
+
+
             <label for="last_name" class="form-label">Último nome</label>
-            <input type="text" class="form-control" id="last_name" name="last_name">
+            <input type="text" class="form-control" id="last_name" name="last_name" value="{{ form.last_name.value|default_if_none:'' }}">
             
             <label for="cpf" class="form-label">CPF</label>
-            <input type="text" class="form-control" id="cpf" name="cpf">
+            <input type="text" class="form-control" id="cpf" name="cpf" value="{{ form.cpf.value|default_if_none:'' }}">
             
             <label for="birth_date" class="form-label">Data de nascimento</label>
-            <input type="date" class="form-control" id="birth_date" name="birth_date">
+            <input type="date" class="form-control" id="birth_date" name="birth_date" value="{{ form.birth_date.value|default_if_none:'' }}">
             
             <label for="ticket_date" class="form-label">Data do ingresso</label>
-            <input type="date" class="form-control" id="ticket_date" name="ticket_date">
+            <input type="date" class="form-control" id="ticket_date" name="ticket_date" value="{{ form.ticket_date.value|default_if_none:'' }}">
 
             <label for="ticket_type" class="form-label">Tipo do ingresso</label>
             <select name="ticket_type" id="ticket_type" class="form-select">

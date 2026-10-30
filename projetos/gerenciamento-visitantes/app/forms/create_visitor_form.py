@@ -1,6 +1,6 @@
 from django import forms
 
-from app.models import Visitor
+from ..models import Visitor
 
 class CreateVisitorForm(forms.ModelForm):
     class Meta:
