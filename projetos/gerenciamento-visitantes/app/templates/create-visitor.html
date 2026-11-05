@@ -102,7 +102,7 @@ Criar visitante
 
             <div class="col">
                 <div>
-                    <label for="cpf" class="form-label">Senha</label>
+                    <label for="password" class="form-label">Senha</label>
                     <input type="password" class="form-control" id="password" name="password"
                         value="{{ form.password.value|default_if_none:'' }}">
                     <div class="form-text text-danger">
@@ -115,7 +115,7 @@ Criar visitante
                 </div>
 
                 <div>
-                    <label for="cpf" class="form-label">Confirmar senha</label>
+                    <label for="confirm_password" class="form-label">Confirmar senha</label>
                     <input type="password" class="form-control" id="confirm_password" name="confirm_password"
                         value="{{ form.confirm_password.value|default_if_none:'' }}">
                     <div class="form-text text-danger">
