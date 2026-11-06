@@ -68,7 +68,8 @@ def update_visitor(request, id):
         visitor_form = UpdateVisitorForm(instance=visitor)
 
     response = {
-        'form': visitor_form    
+        'form': visitor_form,
+        'ticket_number': visitor.ticket_number
     }
 
     return render(request, 'update-visitor.html', response)
