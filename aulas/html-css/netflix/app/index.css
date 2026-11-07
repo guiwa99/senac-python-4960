@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    height: 70px;
+    justify-content: space-between;
+
+    /* background-color: #000000; */
+}
+
+.header-logo {
+    height: 70px;
+    width: 150px;
+}
+
+.header-user-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.header-left-side {
+    display: flex;
+}
