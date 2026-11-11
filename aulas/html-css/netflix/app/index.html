@@ -10,12 +10,13 @@
 
     <title>Netflix</title>
 </head>
-
 <body>
     <header class="header">
 
         <div class="header-left-side">
-            <img src="./images/logo.jpg" alt="Logo Netflix" class="header-logo">
+            <a href="#">
+                <img src="./images/logo.jpg" alt="Logo Netflix" class="header-logo">
+            </a>
 
             <ul class="header-left-menu">
                 <a href="#">
@@ -44,12 +45,20 @@
                 <i class="bi bi-bell-fill header-right-side-item"></i>
             </button>
 
-            <button>
+            <button class="header-user-icon-button">
                 <img src="./images/user-icon.jpg" alt="Icone de usuário" class="header-user-icon">
-                <i class="bi bi-caret-down-fill"></i>
+                <i style="font-size: 8px; margin-left: 5px" class="bi bi-caret-down-fill"></i>
             </button>
         </div>
     </header>
+
+    <main>
+        <section>
+            <img src="./images/banner-home.png" alt="Banner principal">
+            <button class="btn-primary"><i class="bi bi-play-fill"></i>Assistir</button>
+            <button class="btn-secondary"><i class="bi bi-plus-lg"></i>Minha lista</button>
+        </section>
+    </main>
 </body>
 
 </html>

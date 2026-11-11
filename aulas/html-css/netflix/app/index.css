@@ -4,6 +4,7 @@
 
 body {
     margin: 0;
+    background-color: #000000;
 }
 
 a {
@@ -27,12 +28,12 @@ button {
 
 .header-logo {
     height: 70px;
-    width: 150px;
+    width: 120px;
 }
 
 .header-user-icon {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 
 .header-left-side {
@@ -60,4 +61,24 @@ button {
     padding: 5px;
 
     font-size: 20px;
+}
+
+.header-right-side {
+    display: flex;
+}
+
+.header-user-icon-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-primary {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.btn-secondary {
+    background-color: #2E2E30;
+    color: #FFFFFF;
 }
