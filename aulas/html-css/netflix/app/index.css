@@ -78,7 +78,63 @@ button {
     color: #000000;
 }
 
+.btn-primary i {
+    color: #000000;
+    margin-right: 5px;
+}
+
+.btn-primary:hover {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.btn-primary:hover i {
+    color: #FFFFFF;
+}
+
 .btn-secondary {
     background-color: #2E2E30;
     color: #FFFFFF;
+}
+
+.btn-secondary i {
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+
+.btn-secondary:hover {
+    background-color: #FFFFFF;
+    color: #2E2E30;
+}
+
+.btn-secondary:hover i {
+    color: #2E2E30;
+}
+
+.btn {
+    width: 110px;
+    height: 30px;
+    border-radius: 7px;
+    font-weight: 700;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-main-content-image {
+    width: 100%;
+}
+
+.section-main-content {
+    position: relative;
+}
+
+.section-main-content-buttons {
+    position: absolute;
+    top: 80%;
+    left: 0;
 }
